@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #0b0b0b;
+            color: white;
+            border: none;
+            line-height: 2ch;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1f1f1f;
+        }
+        .forgot{
+            position: relative;
+            color: blue;
+            top: 1ch;
+            padding-left: 15ch;
+        }
+        .forgot:hover{
+            color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>BFlux Login Form</h2>
+        <form>
+            <input type="text" placeholder="Username" name="username" id="username" required>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <input id="check" type="checkbox" class="check">
+            <label for="type">Keep Me Sign In</label>
+            <input type="submit" id="login" onclick="userLogin(event)"></input>
+            <!-- <a href="./forgotp.html"><label for="type" class="forgot">Forgot Password</label></a> -->
+        </form>
+    </div>
+    <script src="./src/utils.js"></script>
+    <script src="./src/API/Logistics.js"></script>
+    <script src="./src/routes.js"></script>
+</body>
+</html>
